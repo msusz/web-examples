@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+    font-family: Roboto, sans-serif;
+}
+
+aside p {
+    color: green;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+#first-section>p {
+    text-decoration: underline;
+}
+
+h1, h2 {
+    font-style: italic;
+}
+
+.small {
+    font-variant: small-caps;
+}
+
+#comment {
+    background-color: lightblue;
+}
+
+ul {
+    list-style-type: none;
+}
