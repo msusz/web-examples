@@ -1,1 +1,11 @@
 /* Put your styles here according to exercise description */
+.card {
+    position: relative;
+}
+
+.tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+}
