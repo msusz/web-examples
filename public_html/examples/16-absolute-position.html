@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shadows</title>
+    <title>Absolute position</title>
     <style>
         /* ----------------------------------------------
            Sizing, padding. Styles not related to shadows
@@ -14,8 +14,8 @@
             padding: 2rem 4rem;
         }
 
-        article {
-            min-width: 100rem;
+        main {
+            min-width: 80rem;
         }
 
         h1 {
@@ -27,8 +27,9 @@
             font-size: 3.2rem;
         }
 
-        p, li {
+        p {
             font-size: 2rem;
+            line-height: 2.6rem;
         }
 
         #card-container {
@@ -45,6 +46,10 @@
             border-radius: 1rem;
             width: 25rem;
             height: 40rem;
+            box-shadow: 0 0 2rem 0 rgba(100, 100, 100, 0.2);
+            /** See? We set the position to all cards to relative, so that we
+            can position child elements absolutely within the cards */
+            position: relative;
         }
 
         .card img {
@@ -57,59 +62,56 @@
 
         .card-description p {
             font-size: 1.6rem;
-            line-height: 2.4rem;
         }
 
+        .tag {
+            background-color: yellow;
+            padding: 0.5rem 2rem;
+            font-variant: small-caps;
+            width: 5rem;
+            text-align: center;
+            font-size: 2rem;
 
-        /* ----------------------------------------------
-           Shadow configuration here
-           ---------------------------------------------- */
-        .subtle-shadow {
-            box-shadow: 0 0 2rem 0 rgba(100, 100, 100, 0.2);
+            /* We position the element absolutely - anchoring it relative
+            to the top-left corner. Remember: for this to work - we need to
+            set the parent elements position to relative! */
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
         }
 
-        .large-shadow {
-            box-shadow: 0 0 5rem 0 rgba(128, 128, 128, 0.8);
-        }
     </style>
 </head>
 <body>
 
 <main>
     <section id="info">
-        <h1>Shadows</h1>
-        <p>This is how we can use shadows. The shadow uses for parameters:</p>
-        <ul>
-            <li>Horizontal offset - how much to the right the shadow is placed
-            </li>
-            <li>Vertical offset - how much down the shadow is placed</li>
-            <li>Blur - how large is the area when the shadow fades out</li>
-            <li>Spread - how large is the area where the shadow has a solid
-                "base" color
-            </li>
-        </ul>
+        <h1>Absolute position</h1>
+        <p>Here we position the <code>.tag</code> element using absolute
+            positioning. For
+            that to work, we need to set <code>{position:relative}</code> to the
+            parent element (or any other ancestor of the NEW element).</p>
     </section>
 
     <section id="card-container">
-        <div class="card subtle-shadow">
+        <div class="card">
             <img src="https://i.picsum.photos/id/527/250/150.jpg?hmac=eUPglLVMqaybn6wnCCMggd1L40qp8VH6mIVLlRLVPr0"
                  alt="Compass and notebook on a desk">
             <div class="card-description">
                 <h2>Product 1</h2>
-                <p>Here is a product card with a very subtle shadow</p>
+                <p>Here is a product</p>
             </div>
+            <div class="tag">New!</div>
         </div>
 
-        <div class="card large-shadow">
+        <div class="card">
             <img src="https://i.picsum.photos/id/998/250/150.jpg?hmac=RNroOR_CZ5JWv5hB-sui9XFWExqGrJ1yXpS4aZ2nBPs"
                  alt="Pack of letters and a pen">
             <div class="card-description">
                 <h2>Product 2</h2>
-                <p>Here is another product with a much larger and stronger
-                    shadow. It looks like this card is higher
-                    than
-                    the other, right?</p>
+                <p>Here is another product</p>
             </div>
+            <div class="tag">Old!</div>
         </div>
     </section>
 </main>
