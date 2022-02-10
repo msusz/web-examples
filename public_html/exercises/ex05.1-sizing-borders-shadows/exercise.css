@@ -1,1 +1,43 @@
-/* Put your styles here according to exercise description */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 2rem;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+.card {
+    width: 25rem;
+    height: 40rem;
+    margin: 4rem 2rem;
+    border: darkgray dashed 0.1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 0.5rem 0 lightgray;
+}
+
+.highlighted {
+    box-shadow: 0 0 2rem 1rem rgba(200, 200, 200, 0.75);
+}
+
+div.card-description {
+    margin: 2rem 1rem;
+}
