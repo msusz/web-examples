@@ -1,1 +1,12 @@
 /* Put your styles here according to exercise description */
+.card {
+    position: relative;
+}
+
+.tag {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0.7rem;
+    right: -3rem;
+    padding-inline: 3rem;
+}
