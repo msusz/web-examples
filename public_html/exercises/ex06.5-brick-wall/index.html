@@ -8,7 +8,41 @@
         /* -------------------------------------
            Put your styles here
            ------------------------------------- */
+        #brick2, #brick3 {
+            grid-row: 1;
+        }
 
+        #brick4, #brick6 {
+            grid-row: 2;
+        }
+
+        #brick5, #brick1 {
+            grid-row: 3;
+        }
+
+        #brick3 {
+            grid-column: 1 /span 2;
+        }
+
+        #brick6 {
+            grid-column: 2 /span 2;
+        }
+
+        #brick5 {
+            grid-column: 1 /span 2;
+        }
+
+        #brick-wall-grid {
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 110px 110px 110px;
+        }
+
+        .brick {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
         /* -------------------------------------
            DON'T CHANGE STYLES BELOW!
@@ -26,9 +60,11 @@
             box-sizing: border-box;
             margin: 0.5rem 0 0 0.5rem;
             color: white;
-            text-align: center;
             font-size: 1.6rem;
+
         }
+
+
     </style>
 </head>
 
